@@ -1,0 +1,135 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 11.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4474,        127]
+NotebookOptionsPosition[      3480,         99]
+NotebookOutlinePosition[      3825,        114]
+CellTagsIndexPosition[      3782,        111]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Primero generamos la lista de numeros telefonicos, los cuales estan \
+desordenados, lo cual es lo ideal.\
+\>", "Text",
+ CellChangeTimes->{{3.8539793108204613`*^9, 
+  3.8539793471885123`*^9}},ExpressionUUID->"7b9462f8-3c00-45c9-bb37-\
+77fce45c6362"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"List2281", "=", 
+   RowBox[{"RandomSample", "[", 
+    RowBox[{
+     RowBox[{"Range", "[", 
+      RowBox[{"2281000000", ",", "2281999999"}], "]"}], ",", "1000000"}], 
+    "]"}]}], "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.8539734413679166`*^9, 3.8539734590047407`*^9}, {
+  3.853973673582898*^9, 3.8539736750113583`*^9}, {3.8539737086549263`*^9, 
+  3.853973735152923*^9}, {3.8539743504874983`*^9, 3.853974353535124*^9}, {
+  3.853974386643174*^9, 3.8539744018278413`*^9}, {3.8539744351292458`*^9, 
+  3.853974475386447*^9}, {3.853974517660662*^9, 3.8539745411908855`*^9}, {
+  3.853974579393083*^9, 3.8539746467661095`*^9}, {3.853974704509977*^9, 
+  3.853974711368924*^9}},ExpressionUUID->"423eef6a-1e07-43b2-9d24-\
+df108bce389a"],
+
+Cell["Ahora guardamos la lista con todos los numeros", "Text",
+ CellChangeTimes->{{3.8539793513917665`*^9, 
+  3.853979361974513*^9}},ExpressionUUID->"1eb37074-0288-498f-85bd-\
+7548d13d7ddd"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<List2281.csv\>\"", ",", "List2281"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8539770754104443`*^9, 3.8539771098772697`*^9}, 
+   3.8539791116267333`*^9},ExpressionUUID->"faaa947e-787a-41e0-9c4c-\
+a713fb272a9b"],
+
+Cell["\<\
+
+Ahora importamos los numeros\
+\>", "Text",
+ CellChangeTimes->{{3.8539793645381947`*^9, 3.853979375285046*^9}, 
+   3.8539797744669647`*^9},ExpressionUUID->"ace04934-20bd-4a0b-8120-\
+d45a68ddb301"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Lista", "=", 
+   RowBox[{"Import", "[", "\"\<List2281.csv\>\"", "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Liste", "=", 
+  RowBox[{"Flatten", "[", "Lista", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.8539787908473654`*^9, 3.8539788364615817`*^9}, 
+   3.8539789168885984`*^9, 3.853979070341056*^9, {3.8539791187211885`*^9, 
+   3.8539791196239595`*^9}, {3.853979777882989*^9, 
+   3.8539797793314295`*^9}},ExpressionUUID->"498dabf2-e1ac-4794-936e-\
+80c014a47bcb"],
+
+Cell["\<\
+Volvemos a exportar los numeros, pero esta vez seleccionando el rango de \
+numeros que queremos importar, a partir de la lista principal.\
+\>", "Text",
+ CellChangeTimes->{{3.8539797810951138`*^9, 
+  3.853979814129654*^9}},ExpressionUUID->"465a6064-d7bb-4c48-8de0-\
+2197043eeba0"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Export", "[", 
+   RowBox[{"\"\<numerostel.csv\>\"", ",", 
+    RowBox[{"Liste", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ";;", "10000"}], "]"}], "]"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.8539792324479847`*^9, 3.8539792648322687`*^9}, {
+  3.853979821200706*^9, 
+  3.853979825385878*^9}},ExpressionUUID->"981f1b24-88b3-49a4-9227-\
+f6a5a0b2fe78"]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"11.1 para Microsoft Windows (64-bit) (April 18, 2017)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 258, 6, 30, "Text", "ExpressionUUID" -> \
+"7b9462f8-3c00-45c9-bb37-77fce45c6362"],
+Cell[819, 28, 775, 15, 68, "Input", "ExpressionUUID" -> \
+"423eef6a-1e07-43b2-9d24-df108bce389a"],
+Cell[1597, 45, 190, 3, 30, "Text", "ExpressionUUID" -> \
+"1eb37074-0288-498f-85bd-7548d13d7ddd"],
+Cell[1790, 50, 282, 6, 47, "Input", "ExpressionUUID" -> \
+"faaa947e-787a-41e0-9c4c-a713fb272a9b"],
+Cell[2075, 58, 206, 6, 49, "Text", "ExpressionUUID" -> \
+"ace04934-20bd-4a0b-8120-d45a68ddb301"],
+Cell[2284, 66, 504, 11, 84, "Input", "ExpressionUUID" -> \
+"498dabf2-e1ac-4794-936e-80c014a47bcb"],
+Cell[2791, 79, 289, 6, 30, "Text", "ExpressionUUID" -> \
+"465a6064-d7bb-4c48-8de0-2197043eeba0"],
+Cell[3083, 87, 393, 10, 104, "Input", "ExpressionUUID" -> \
+"981f1b24-88b3-49a4-9227-f6a5a0b2fe78"]
+}
+]
+*)
+
